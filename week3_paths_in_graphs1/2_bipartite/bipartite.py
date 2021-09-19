@@ -4,15 +4,15 @@ import sys
 import queue
 
 def bipartite(adj):
-    visited=set()
+     
     from collections import defaultdict
     colors=defaultdict(lambda:-1)
     def dfs(x,color):
-        visited.add(x)
+       
         colors[x]=color
         for neighbor in adj[x]:
             if colors[x]==colors[neighbor]:return 0
-            if neighbor not in visited:
+            if colors[neighbor]==-1:
                  
     
                 if    dfs(neighbor,color^1):
